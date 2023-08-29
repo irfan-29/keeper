@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AddCardIcon from "@mui/icons-material/AddCard";
 import Fab from "@mui/material/Fab";
 import Zoom from "@mui/material/Zoom";
 import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
 
 function CreateArea(props) {
 

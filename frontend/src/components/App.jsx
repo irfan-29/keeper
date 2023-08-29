@@ -10,9 +10,9 @@ function App() {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
-    axios.get("https://keeper-5zd9.onrender.com/notes")
+    axios.get("http://localhost:5000/notes")
     .then((data) => {
-      setNotes(data?.data);
+      setNotes(data.data);
     })
     .catch( (err) => console.log(err));
   }, []);
@@ -24,7 +24,7 @@ function App() {
   }
 
   function deleteNote(id, _id, title, content) {
-    axios.delete(`https://keeper-5zd9.onrender.com/notes/${id}`,
+    axios.delete(`http://localhost:5000/notes/${id}`,
     {data: {
       title: title,
       content: content
@@ -43,7 +43,7 @@ function App() {
   } // function deleteNote()
 
   function modifyNote(id, _id, title, content, oldTitle, oldContent) {
-    axios.put(`https://keeper-5zd9.onrender.com/notes/${id}`,
+    axios.put(`http://localhost:5000/notes/${id}`,
      {
        title: title,
        content: content,
