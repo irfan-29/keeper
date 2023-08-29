@@ -28,7 +28,7 @@ function CreateArea(props) {
     async function doPostRequest() {
 
       let payload = { title: note.title, content: note.content, _id: note._id };
-      let res = await axios.post('http://localhost:5000/notes', payload);
+      let res = await axios.post('https://keeper-5zd9.onrender.com/notes', payload);
       let data = res.data;
 
       setNote(previousState => {
