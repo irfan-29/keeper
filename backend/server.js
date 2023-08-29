@@ -52,8 +52,7 @@ app.route("/notes")
 .get(function(req, res) {
    Note.find({}, null)
    .then( docs => res.send(docs) )
-   .catch( err => res.send(err) );
-    
+   .catch( err => res.send(err) );    
 })
 .post(function(req, res) {
     const ind = req.body.id;
